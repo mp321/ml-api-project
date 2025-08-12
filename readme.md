@@ -124,8 +124,7 @@ docker-compose up --build
 
 Access the API
 http://localhost:8000
-
-# or for interactive swagger UI
 http://localhost:8000/docs
 
 <img width="578" height="292" alt="image" src="https://github.com/user-attachments/assets/003f0511-9669-4714-bd54-3c673c475037" />
+
