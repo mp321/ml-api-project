@@ -5,7 +5,7 @@ This provides baseline instructions for running the FastAPI app via:
 - Windows (PowerShell)
 - Directly with Uvicorn (no Docker)
 
-![alt text](image.png)
+<img width="1021" height="577" alt="image" src="https://github.com/user-attachments/assets/e7da4e8d-2a39-46a7-8ace-0590ca66f200" />
 
 ## Core Components
 
@@ -127,3 +127,5 @@ http://localhost:8000
 
 # or for interactive swagger UI
 http://localhost:8000/docs
+
+<img width="578" height="292" alt="image" src="https://github.com/user-attachments/assets/003f0511-9669-4714-bd54-3c673c475037" />
