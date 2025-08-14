@@ -1,32 +1,24 @@
-Michael Phipps @2025
 
-This provides baseline instructions for running the FastAPI app via:
+Simple baseline to run FastAPI app with the following:
 - WSL (Linux)
 - Windows (PowerShell)
 - Directly with Uvicorn (no Docker)
+
+Michael Phipps @2025
 
 <img width="1021" height="577" alt="image" src="https://github.com/user-attachments/assets/e7da4e8d-2a39-46a7-8ace-0590ca66f200" />
 
 ## Core Components
 
 FastAPI:
-A Python framework for building APIs.
-
-Role: It provides the tools to define our API endpoints (e.g., /predict), handle incoming data validation, and structure the application's logic. It's the blueprint for our application.
+A Python framework that provides the tools to define our API endpoints (e.g., /predict), handle incoming data validation, and structure the application's logic. It's the blueprint for our application.
 
 ---------
 
 Uvicorn: 
-Server. High-performance ASGI (Asynchronous Server Gateway Interface) server.
+ASGI (Asynchronous Server Gateway Interface) server that actually runs our FastAPI application. Listens for incoming web requests and passes them to FastAPI to be processed. FastAPI can't run on its own; it needs a server like Uvicorn.
 
-Role: Engine that actually runs our FastAPI application. Uvicorn listens for incoming web requests and passes them to FastAPI to be processed. FastAPI can't run on its own; it needs a server like Uvicorn.
-
---------
-
-Docker:
-The Container (platform) that packages/isolates the environment of all dependencies.
-
----
+---------
 
 ## 1. Running with Docker (WSL/Linux)
 
@@ -34,7 +26,7 @@ The Container (platform) that packages/isolates the environment of all dependenc
 - Docker installed and running
 - Project files: `main.py`, `requirements.txt`, `Dockerfile`
 
-### Steps (bash)
+### Steps (bash, powershell)
 1. Open WSL terminal and navigate to the project directory:
 	cd /path/to/project/ml-api-project
 
@@ -44,30 +36,6 @@ The Container (platform) that packages/isolates the environment of all dependenc
 3. Run the Docker container:
 	docker run -p 8000:8000 fastapi-app
     
-4. Access the API:
-	- [http://localhost:8000](http://localhost:8000)
-	- [http://localhost:8000/docs](http://localhost:8000/docs)
-
----
-
-## 2. Running with Docker (Windows/PowerShell)
-
-### Prerequisites
-- Docker Desktop installed and running
-
-### Steps
-1. Open PowerShell and navigate to your project directory:
-	```powershell
-	cd "...."
-	```
-2. Build the Docker image:
-	```powershell
-	docker build -t fastapi-app .
-	```
-3. Run the Docker container:
-	```powershell
-	docker run -p 8000:8000 fastapi-app
-	```
 4. Access the API:
 	- [http://localhost:8000](http://localhost:8000)
 	- [http://localhost:8000/docs](http://localhost:8000/docs)
@@ -85,9 +53,8 @@ The Container (platform) that packages/isolates the environment of all dependenc
 
 ### Steps
 1. Run the FastAPI app:
-	```bash
 	uvicorn main:app --reload
-	```
+
 2. Access the API:
 	- [http://localhost:8000](http://localhost:8000)
 	- [http://localhost:8000/docs](http://localhost:8000/docs)
@@ -102,29 +69,11 @@ The Container (platform) that packages/isolates the environment of all dependenc
 ---
 
 ## Useful Commands
-- Check Docker version:
-  ```bash
   docker --version
-  ```
-- Check Docker Compose version:
-  ```bash
   docker-compose --version
-  ```
-- Check Uvicorn version:
-  ```bash
   uvicorn --version
-  ```
 
-
-docker build -t fastapi-app .
-docker run -p 8000:8000 fastapi-app
-
-#if using yaml eg docker-compose.yml
-docker-compose up --build
-
-Access the API
-http://localhost:8000
-http://localhost:8000/docs
 
 <img width="578" height="292" alt="image" src="https://github.com/user-attachments/assets/003f0511-9669-4714-bd54-3c673c475037" />
+
 
