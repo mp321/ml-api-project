@@ -20,7 +20,7 @@ ASGI (Asynchronous Server Gateway Interface) server that actually runs our FastA
 
 ---------
 
-## 1. Running with Docker (WSL/Linux)
+## Running with Docker (WSL/Linux)
 
 ### Prerequisites
 - Docker installed and running
@@ -42,7 +42,7 @@ ASGI (Asynchronous Server Gateway Interface) server that actually runs our FastA
 
 ---
 
-## 3. Running Directly with Uvicorn (No Docker)
+## Running Directly with Uvicorn (No Docker)
 
 ### Prerequisites
 - Python 3.8+
@@ -75,5 +75,6 @@ ASGI (Asynchronous Server Gateway Interface) server that actually runs our FastA
 
 
 <img width="578" height="292" alt="image" src="https://github.com/user-attachments/assets/003f0511-9669-4714-bd54-3c673c475037" />
+
 
 
