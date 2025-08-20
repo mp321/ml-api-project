@@ -16,7 +16,12 @@ A Python framework that provides the tools to define our API endpoints (e.g., /p
 ---------
 
 Uvicorn: 
-ASGI (Asynchronous Server Gateway Interface) server that actually runs our FastAPI application. Listens for incoming web requests and passes them to FastAPI to be processed. FastAPI can't run on its own; it needs a server like Uvicorn.
+ASGI (Asynchronous Server Gateway Interface) server that actually runs our FastAPI application. Listens for incoming web requests and passes them to FastAPI to be processed. FastAPI can't run on its own; it needs a server like Uvicorn. https://www.uvicorn.org/
+
+---------
+
+WSL
+Windows Subsystem for Linux (WSL) allows users to run a Linux environment directly within Windows
 
 ---------
 
@@ -65,16 +70,16 @@ ASGI (Asynchronous Server Gateway Interface) server that actually runs our FastA
 - If you get an empty response, check port mapping and ensure the app is running on the correct port.
 - For Docker, make sure your `Dockerfile` CMD matches the exposed port.
 - For Uvicorn, ensure your FastAPI code has a root endpoint (`@app.get("/")`).
+-- check versions compatiblity:
+	  docker --version
+	  docker-compose --version
+	  uvicorn --version
 
----
 
-## Useful Commands
-  docker --version
-  docker-compose --version
-  uvicorn --version
 
 
 <img width="578" height="292" alt="image" src="https://github.com/user-attachments/assets/003f0511-9669-4714-bd54-3c673c475037" />
+
 
 
 
